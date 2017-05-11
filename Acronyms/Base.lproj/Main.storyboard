@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BGo-fD-4g3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter the Acronym or Initialism you want a meaning for" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-hE-vm4">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gGR-wf-AZd"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-p7-J2V">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="atA-7d-7We"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NQD-p7-J2V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Cs-YY-k14"/>
+                            <constraint firstAttribute="trailing" secondItem="Uup-hE-vm4" secondAttribute="trailing" id="EcI-TW-A1l"/>
+                            <constraint firstAttribute="trailing" secondItem="NQD-p7-J2V" secondAttribute="trailing" id="Jrp-SR-YDb"/>
+                            <constraint firstItem="Uup-hE-vm4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T9n-Lt-Lry"/>
+                            <constraint firstItem="NQD-p7-J2V" firstAttribute="top" secondItem="Uup-hE-vm4" secondAttribute="bottom" id="ekq-tn-ril"/>
+                            <constraint firstItem="Uup-hE-vm4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="je1-b8-X46"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NQD-p7-J2V" secondAttribute="bottom" id="pC8-LD-WGM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EX0-al-kwb"/>
+                    <connections>
+                        <outlet property="contentsTableView" destination="NQD-p7-J2V" id="I2e-ie-y8c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hH0-pQ-wjZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BGo-fD-4g3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xtE-fr-iLc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UhY-tX-CP4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKF-t9-ns3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="-305"/>
+        </scene>
+    </scenes>
+</document>
